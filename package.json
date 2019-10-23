@@ -1,0 +1,48 @@
+{
+  "name": "react-shielded",
+  "version": "0.0.1",
+  "description": "Add the Shielded Site to your React website",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "precommit": "lint-staged",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobbuck/react-shielded.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "shielded",
+    "nz"
+  ],
+  "author": "Jacob Buck <buck.jacob@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobbuck/react-shielded/issues"
+  },
+  "homepage": "https://github.com/jacobbuck/react-shielded#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@svgr/rollup": "^4.3.3",
+    "autoprefixer": "^9.6.5",
+    "babel-jest": "^24.9.0",
+    "cssnano": "^4.1.10",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "rollup": "^1.25.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-postcss": "^2.0.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}
