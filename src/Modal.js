@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import Close from './close.svg';
 import styles from './Modal.css';
@@ -52,6 +53,10 @@ const Modal = props => {
       </div>
     </Portal>
   );
+};
+
+Modal.propTypes = {
+  onRequestClose: PropTypes.func.isRequired,
 };
 
 export default Modal;
