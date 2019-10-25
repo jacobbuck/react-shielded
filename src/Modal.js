@@ -4,6 +4,7 @@ import Close from './close.svg';
 import styles from './Modal.css';
 import Portal from './Portal';
 import Spinner from './spinner.svg';
+import useEscapeKey from './useEscapeKey';
 import useLockBodyScroll from './useLockBodyScroll';
 
 const Modal = props => {
@@ -18,6 +19,8 @@ const Modal = props => {
       iframeRef.current.focus();
     }
   }, [isLoading]);
+
+  useEscapeKey(onRequestClose);
 
   useLockBodyScroll();
 
