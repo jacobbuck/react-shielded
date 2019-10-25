@@ -23,7 +23,7 @@ const Modal = props => {
 
   return (
     <Portal>
-      <div className={styles.overlay}>
+      <div aria-modal="true" className={styles.overlay} role="dialog">
         <div className={styles.modal}>
           {isLoading && (
             <div className={styles.loading}>
