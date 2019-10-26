@@ -1,6 +1,6 @@
 # react-shielded
 
-Add the Shielded Site to your React website.
+Add the Women's Refuge Shielded Site button to your React website,
 
 ## What's Shielded?
 

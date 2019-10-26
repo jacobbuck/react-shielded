@@ -1,7 +1,7 @@
 {
   "name": "react-shielded",
   "version": "0.0.1",
-  "description": "Add the Shielded Site to your React website",
+  "description": "Add the Women's Refuge Shielded Site button to your React website",
   "main": "lib/index.js",
   "scripts": {
     "build": "rollup -c",
@@ -17,7 +17,9 @@
     "react",
     "component",
     "shielded",
-    "nz"
+    "nz",
+    "Womans Refuge",
+    "New Zealand"
   ],
   "author": "Jacob Buck <buck.jacob@gmail.com>",
   "license": "MIT",
