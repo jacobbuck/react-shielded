@@ -30,7 +30,11 @@ const Modal = props => {
         <div className={styles.modal}>
           {isLoading && (
             <div className={styles.loading}>
-              <Spinner className={styles.spinner} />
+              <Spinner
+                aria-label="Loading"
+                className={styles.spinner}
+                role="img"
+              />
             </div>
           )}
           <div className={styles.frame} style={{ opacity: isLoading ? 0 : 1 }}>
@@ -49,7 +53,7 @@ const Modal = props => {
               className={styles.close}
               onClick={() => onRequestClose()}
             >
-              <Close />
+              <Close aria-label="Close" role="img" />
             </button>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import Modal from './Modal';
 import styles from './Shielded.css';
 import Button from './button.svg';
@@ -6,7 +6,13 @@ import Button from './button.svg';
 const Shielded = () => {
   const buttonRef = useRef(null);
 
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(null);
+
+  useLayoutEffect(() => {
+    if (isOpen === false) {
+      buttonRef.current.focus();
+    }
+  }, [isOpen]);
 
   return (
     <>
@@ -17,16 +23,9 @@ const Shielded = () => {
         style={{ opacity: isOpen ? 0 : 1 }}
         type="button"
       >
-        <Button />
+        <Button aria-label="Women's Refuge" role="img" />
       </button>
-      {isOpen && (
-        <Modal
-          onRequestClose={() => {
-            setOpen(false);
-            buttonRef.current.focus();
-          }}
-        />
-      )}
+      {isOpen && <Modal onRequestClose={() => setOpen(false)} />}
     </>
   );
 };
