@@ -7,7 +7,7 @@
     "build": "rollup -c",
     "prepare": "npm run build",
     "start": "rollup -c -w",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,6 @@
     "@svgr/rollup": "^4.3.3",
     "autoprefixer": "^9.6.5",
     "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
     "cssnano": "^4.1.10",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
@@ -42,7 +41,6 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "husky": "^3.0.9",
-    "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "rollup": "^1.25.0",
