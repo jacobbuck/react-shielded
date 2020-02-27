@@ -10,7 +10,7 @@ From [The Shielded Site Project](https://shielded.co.nz) website:
 
 ## Features
 
-* :100: Rewrite of the [Shielded script](https://d3f5l8ze0o4j2m.cloudfront.net/m87/k33spt.js) in React
+* :100: Rewrite of the [Shielded script](https://staticcdn.co.nz/embed/embed.js) in React
 * :lock: No external resources requested—except the iframed content
 * :black_nib: Hand-crafted vector icons
 * :wheelchair: Accessibility support
