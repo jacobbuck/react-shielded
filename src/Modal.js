@@ -45,7 +45,7 @@ const Modal = (props) => {
               onLoad={() => setLoading(false)}
               ref={iframeRef}
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-              src="https://d3f5l8ze0o4j2m.cloudfront.net"
+              src="https://staticcdn.co.nz"
               width="310"
             />
             <button
