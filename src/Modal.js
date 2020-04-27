@@ -7,7 +7,7 @@ import Spinner from './spinner.svg';
 import useEscapeKey from './useEscapeKey';
 import useLockBodyScroll from './useLockBodyScroll';
 
-const Modal = props => {
+const Modal = (props) => {
   const { onRequestClose } = props;
 
   const iframeRef = useRef(null);
