@@ -11,7 +11,7 @@ export default {
     file: 'lib/index.js',
     format: 'cjs',
   },
-  external: ['react', 'react-dom'],
+  external: ['prop-types', 'react', 'react-dom', 'react-use-keypress'],
   plugins: [
     svgr(),
     postcss({
