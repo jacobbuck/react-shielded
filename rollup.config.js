@@ -7,7 +7,6 @@ import postcss from 'rollup-plugin-postcss';
 export default {
   input: 'src/index.js',
   output: {
-    exports: 'named',
     file: 'lib/index.js',
     format: 'cjs',
   },

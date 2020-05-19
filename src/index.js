@@ -1,2 +1,1 @@
-import Shielded from './Shielded';
-export default Shielded;
+export { default } from './Shielded';
