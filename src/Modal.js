@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
+import useKeypress from 'react-use-keypress';
 import Close from './close.svg';
 import styles from './Modal.css';
 import Portal from './Portal';
 import Spinner from './spinner.svg';
-import useEscapeKey from './useEscapeKey';
 import useLockBodyScroll from './useLockBodyScroll';
 
 const Modal = (props) => {
@@ -20,7 +20,7 @@ const Modal = (props) => {
     }
   }, [isLoading]);
 
-  useEscapeKey(onRequestClose);
+  useKeypress('Escape', onRequestClose);
 
   useLockBodyScroll();
 
