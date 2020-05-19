@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import useKeypress from 'react-use-keypress';
 import Close from './close.svg';
@@ -60,10 +59,6 @@ const Modal = (props) => {
       </div>
     </Portal>
   );
-};
-
-Modal.propTypes = {
-  onRequestClose: PropTypes.func.isRequired,
 };
 
 export default Modal;

@@ -30,6 +30,4 @@ const Shielded = () => {
   );
 };
 
-Shielded.propTypes = {};
-
 export default Shielded;
