@@ -1,7 +1,7 @@
+import babel from '@rollup/plugin-babel';
 import svgr from '@svgr/rollup';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 
 export default {
