@@ -7,23 +7,21 @@ import postcss from 'rollup-plugin-postcss';
 export default {
   input: 'src/index.js',
   output: [
-    {
-      file: 'lib/index.cjs.js',
-      format: 'cjs',
-    },
-    {
-      file: 'lib/index.esm.js',
-      format: 'esm',
-    },
+    { file: 'lib/index.cjs.js', format: 'cjs' },
+    { file: 'lib/index.esm.js', format: 'esm' },
   ],
-  external: ['react', 'react-dom', 'react-use-keypress'],
+  external: [/@babel\/runtime/, 'react', 'react-dom', 'react-use-keypress'],
   plugins: [
-    svgr(),
+    svgr({ babel: false }),
     postcss({
       extensions: ['.css'],
       modules: true,
       plugins: [autoprefixer(), cssnano()],
     }),
-    babel(),
+    babel({
+      babelHelpers: 'runtime',
+      extensions: ['.js', '.svg'],
+      plugins: ['@babel/plugin-transform-runtime'],
+    }),
   ],
 };
