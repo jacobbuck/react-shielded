@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "lint": "eslint .",
+    "format": "prettier --write .",
     "prepare": "npm run build",
     "start": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
