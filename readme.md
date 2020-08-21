@@ -1,6 +1,6 @@
 # react-shielded
 
-Add the Women's Refuge Shielded Site button to your React website,
+Add the Women's Refuge Shielded Site button to your React website.
 
 ## What's Shielded?
 
@@ -10,10 +10,10 @@ From [The Shielded Site Project](https://shielded.co.nz) website:
 
 ## Features
 
-- :100: Rewrite of the [Shielded script](https://staticcdn.co.nz/embed/embed.js) in React
-- :lock: No external resources requested—except the iframed content
-- :black_nib: Hand-crafted vector icons
-- :wheelchair: Accessibility support
+- :100: Rewrite of the [Shielded script](https://staticcdn.co.nz/embed/embed.js) in React.
+- :lock: No external resources requested—except the iframed content.
+- :black_nib: Hand-crafted vector icons.
+- :wheelchair: Accessibility support.
 
 ## Usage
 
