@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Modal from './Modal';
 import styles from './Shielded.css';
 import Button from './button.svg';
@@ -6,9 +6,9 @@ import Button from './button.svg';
 const Shielded = () => {
   const buttonRef = useRef(null);
 
-  const [isOpen, setOpen] = useState(null);
+  const [isOpen, setOpen] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isOpen === false) {
       buttonRef.current.focus();
     }
