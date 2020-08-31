@@ -35,6 +35,7 @@
   "homepage": "https://github.com/jacobbuck/react-shielded#readme",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
+    "react-document-portal": "^1.0.0",
     "react-use-keypress": "^1.0.1"
   },
   "devDependencies": {

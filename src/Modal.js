@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
+import DocumentPortal from 'react-document-portal';
 import useKeypress from 'react-use-keypress';
 import Close from './close.svg';
 import styles from './Modal.css';
-import Portal from './Portal';
 import Spinner from './spinner.svg';
 import useLockBodyScroll from './useLockBodyScroll';
 
@@ -24,7 +24,7 @@ const Modal = (props) => {
   useLockBodyScroll();
 
   return (
-    <Portal>
+    <DocumentPortal>
       <div aria-modal="true" className={styles.overlay} role="dialog">
         <div className={styles.modal}>
           {isLoading && (
@@ -57,7 +57,7 @@ const Modal = (props) => {
           </div>
         </div>
       </div>
-    </Portal>
+    </DocumentPortal>
   );
 };
 
