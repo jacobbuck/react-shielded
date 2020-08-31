@@ -6,6 +6,7 @@
 
 - Changed how `overflow` style on `<body>` element is reverted to prevent taking higher specificity over app styles.
 - Replaced internal `Portal` component with [react-document-portal](https://www.npmjs.com/package/react-document-portal).
+- Replaced all uses of `useLayoutEffect` hook with `useEffect` hook.
 
 ## v1.3.0 - 2020-07-10
 
