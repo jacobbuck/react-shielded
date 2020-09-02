@@ -10,7 +10,13 @@ export default {
     { file: 'lib/index.cjs.js', format: 'cjs' },
     { file: 'lib/index.esm.js', format: 'esm' },
   ],
-  external: [/@babel\/runtime/, 'react', 'react-dom', 'react-use-keypress'],
+  external: [
+    /@babel\/runtime/,
+    'react',
+    'react-document-portal',
+    'react-dom',
+    'react-use-keypress',
+  ],
   plugins: [
     svgr({ babel: false }),
     postcss({
