@@ -7,7 +7,7 @@ import postcss from 'rollup-plugin-postcss';
 export default {
   input: 'src/index.js',
   output: [
-    { file: 'lib/index.cjs.js', format: 'cjs' },
+    { file: 'lib/index.cjs.js', format: 'cjs', exports: 'default' },
     { file: 'lib/index.esm.js', format: 'esm' },
   ],
   external: [
