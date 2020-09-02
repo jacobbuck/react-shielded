@@ -35,20 +35,20 @@
   "homepage": "https://github.com/jacobbuck/react-shielded#readme",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "react-document-portal": "^1.0.0",
+    "react-document-portal": "^1.0.1",
     "react-use-keypress": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/core": "^7.11.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@rollup/plugin-babel": "^5.2.0",
     "@svgr/rollup": "^5.4.0",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "cssnano": "^4.1.10",
-    "eslint": "^7.7.0",
+    "eslint": "^7.8.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
@@ -56,8 +56,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
     "prettier": "^2.1.1",
-    "rollup": "^2.26.7",
-    "rollup-plugin-postcss": "^3.1.6"
+    "rollup": "^2.26.9",
+    "rollup-plugin-postcss": "^3.1.8"
   },
   "peerDependencies": {
     "react": "^16.8.0",
