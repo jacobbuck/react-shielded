@@ -9,11 +9,13 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "coverage": "jest --coverage",
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "npm run build",
+    "prepublishOnly": "npm run test",
     "start": "rollup -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
