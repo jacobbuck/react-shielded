@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders and matches snapshot 1`] = `
+<button
+  aria-label="Women’s Refuge"
+  style="display: inline-block; margin: 0px; padding: 0px; appearance: none; background: none; cursor: pointer; opacity: 1;"
+  type="button"
+>
+  <svg />
+</button>
+`;
