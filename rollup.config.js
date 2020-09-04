@@ -11,7 +11,6 @@ export default {
     /@babel\/runtime/,
     'react',
     'react-document-portal',
-    'react-dom',
     'react-use-keypress',
   ],
   plugins: [
