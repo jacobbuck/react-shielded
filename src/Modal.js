@@ -72,6 +72,7 @@ const Modal = (props) => {
             }}
           >
             <iframe
+              aria-label="The Shielded Site"
               frameBorder="0"
               height="420"
               onError={onRequestClose}
