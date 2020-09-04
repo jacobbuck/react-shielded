@@ -26,7 +26,7 @@ const Shielded = () => {
         style={{ opacity: isOpen ? 0 : 1 }}
         type="button"
       >
-        <Button aria-label="Women's Refuge" role="img" />
+        <Button aria-label="Women’s Refuge" role="img" />
       </button>
       {isOpen && (
         <Modal

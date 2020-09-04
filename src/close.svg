@@ -5,6 +5,7 @@
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
+  <title>Close</title>
   <path
     d="m0 0h50v10c0 13.798-11.202 25-25 25s-25-11.202-25-25z"
     fill="#415b58"
