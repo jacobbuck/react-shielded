@@ -5,8 +5,9 @@ import Button from './button.svg';
 
 const Shielded = () => {
   const buttonRef = useRef(null);
-
-  const [isOpen, setOpen] = useState(false);
+  
+  // Set to `null` initially to prevent calling focus on first mount.
+  const [isOpen, setOpen] = useState(null);
 
   useEffect(() => {
     if (isOpen === false) {
