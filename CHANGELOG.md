@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- Added checks to ensure nodes exist before calling DOM methods.
+- Fixed a bug where the shielded button would try gain focus on mount.
+
 ## v1.4.0 - 2020-09-02
 
 ### Changed
