@@ -19,14 +19,22 @@ const Shielded = () => {
     <>
       <button
         className={styles.button}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+        }}
         ref={buttonRef}
         style={{ opacity: isOpen ? 0 : 1 }}
         type="button"
       >
         <Button aria-label="Women's Refuge" role="img" />
       </button>
-      {isOpen && <Modal onRequestClose={() => setOpen(false)} />}
+      {isOpen && (
+        <Modal
+          onRequestClose={() => {
+            setOpen(false);
+          }}
+        />
+      )}
     </>
   );
 };

@@ -40,8 +40,10 @@ const Modal = (props) => {
             <iframe
               frameBorder="0"
               height="420"
-              onError={() => onRequestClose()}
-              onLoad={() => setLoading(false)}
+              onError={onRequestClose}
+              onLoad={() => {
+                setLoading(false);
+              }}
               ref={iframeRef}
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
               src="https://staticcdn.co.nz"
@@ -50,7 +52,7 @@ const Modal = (props) => {
             <button
               type="button"
               className={styles.close}
-              onClick={() => onRequestClose()}
+              onClick={onRequestClose}
             >
               <Close aria-label="Close" role="img" />
             </button>
