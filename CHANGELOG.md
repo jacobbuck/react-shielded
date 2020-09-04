@@ -6,6 +6,7 @@
 
 - Moved styles from injected CSS to inline styles for better SSR support.
 - Replaced CSS animation of spinner with SVG animation.
+- Updated devDependencies.
 
 ## v1.4.1 - 2020-09-04
 
