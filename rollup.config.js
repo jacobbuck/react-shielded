@@ -7,18 +7,12 @@ export default {
     { file: 'lib/index.cjs.js', format: 'cjs', exports: 'default' },
     { file: 'lib/index.esm.js', format: 'esm' },
   ],
-  external: [
-    /@babel\/runtime/,
-    'react',
-    'react-document-portal',
-    'react-use-keypress',
-  ],
+  external: ['react', 'react-document-portal', 'react-use-keypress'],
   plugins: [
-    svgr({ babel: false }),
+    svgr({ babel: false, expandProps: false }),
     babel({
-      babelHelpers: 'runtime',
+      babelHelpers: 'bundled',
       extensions: ['.js', '.svg'],
-      plugins: ['@babel/plugin-transform-runtime'],
     }),
   ],
 };
