@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed
+
+- Updated devDependencies.
+
 ### Fixed
 
 - Added checks to ensure nodes exist before calling DOM methods.
