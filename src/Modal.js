@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import DocumentPortal from 'react-document-portal';
 import useKeypress from 'react-use-keypress';
 import Close from './close.svg';
-import styles from './Modal.css';
 import Spinner from './spinner.svg';
 import useLockBodyScroll from './useLockBodyScroll';
 
@@ -25,20 +24,51 @@ const Modal = (props) => {
 
   return (
     <DocumentPortal>
-      <div aria-modal="true" className={styles.overlay} role="dialog">
-        <div className={styles.modal}>
+      <div
+        aria-modal="true"
+        role="dialog"
+        style={{
+          position: 'fixed',
+          top: '0',
+          left: '0',
+          right: '0',
+          bottom: '0',
+          zIndex: '99999',
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          overflow: 'auto',
+        }}
+      >
+        <div
+          style={{
+            position: 'relative',
+            display: 'flex',
+            flexDirection: 'column',
+            width: '310px',
+          }}
+        >
           {isLoading && (
-            <div className={styles.loading}>
-              <Spinner
-                aria-label="Loading"
-                className={styles.spinner}
-                role="img"
-              />
+            <div
+              style={{
+                position: 'absolute',
+                display: 'flex',
+                alignItems: 'center',
+                height: '420px',
+                justifyContent: 'center',
+                width: '310px',
+              }}
+            >
+              <Spinner aria-label="Loading" role="img" />
             </div>
           )}
           <div
-            className={styles.frame}
-            style={{ opacity: isLoading ? 0 : 0.98 }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              opacity: isLoading ? '0' : '0.98',
+            }}
           >
             <iframe
               frameBorder="0"
@@ -54,8 +84,19 @@ const Modal = (props) => {
             />
             <button
               type="button"
-              className={styles.close}
               onClick={onRequestClose}
+              style={{
+                display: 'inline-block',
+                alignSelf: 'center',
+                margin: '-1px 0 0 0',
+                padding: '0',
+                border: 'none',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none',
+                appearance: 'none',
+                background: 'none',
+                cursor: 'pointer',
+              }}
             >
               <Close aria-label="Close" role="img" />
             </button>

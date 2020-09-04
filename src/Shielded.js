@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Modal from './Modal';
-import styles from './Shielded.css';
 import Button from './button.svg';
 
 const Shielded = () => {
@@ -18,12 +17,22 @@ const Shielded = () => {
   return (
     <>
       <button
-        className={styles.button}
         onClick={() => {
           setOpen(true);
         }}
         ref={buttonRef}
-        style={{ opacity: isOpen ? 0 : 1 }}
+        style={{
+          display: 'inline-block',
+          margin: '0',
+          padding: '0',
+          border: 'none',
+          WebkitAppearance: 'none',
+          MozAppearance: 'none',
+          appearance: 'none',
+          background: 'none',
+          cursor: 'pointer',
+          opacity: isOpen ? '0' : '1',
+        }}
         type="button"
       >
         <Button aria-label="Women’s Refuge" role="img" />
