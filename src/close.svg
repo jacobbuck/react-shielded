@@ -5,17 +5,10 @@
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
-  <clipPath id="a">
-    <path d="m0 0h50v10c0 13.798-11.202 25-25 25s-25-11.202-25-25z" />
-  </clipPath>
-  <g clip-path="url(#a)">
-    <image
-      height="37"
-      transform="translate(-1 -1)"
-      width="52"
-      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAlBAMAAAD/3NfmAAAALVBMVEUAAABBV1REWldCWFVDWVZAVlNGXFlFW1hHXVpIXls/VVJJX1w+VFFKYF09U1CKU9jdAAAAAXRSTlMAQObYZgAAA1lJREFUeAF9wc1T41QAAPAHLYt7Y0MlHb007z3yyuKBJiFpHcfZJq/52JNbGGHHCySZBBzHaZJHXnEv21JIuS20Fna8KYNeXdfBqx8zetQZDzr+M/4F+vuB/zGHOootYCqzoY8tprykN7H+FD042wMlNdHR20enRI4irR1c+aneXG8RAh+BN/AnE1/+I6wbDf3CUQaMo6NTjri/BxZFf98NfXVVuNrifgbxz8NU8WBOn4N739LC/619/VWeyiLFkPjmawhj+7wGFieaQQMaThpFNLptaqku3AZynbAemK8nciSGH9WXySh99tizjwItddybcA/MqZfopcehktKCqph+pl8eDiqVtrABynfRfuZAHoRtMssh08YajohMtRdgoTE+r3bG7tfVi3C7nmHtl2ioqN5Er4Fy7kJ/i6CHymOziv4aSo1hM7NZ13wOygk0BHFXPTutEn/GuSWPKUNOSHtgzsTLpJ5qDFcyaEmW9Er1PaKN3BfgnvwT6c9uTGTvO1TP4z8h02Ns0kYNzJ9kR8Ocvd99z1Fky+FbBI+7XSixGpgreItXzqZslYWmCFFxwFjckiP8ASjZuwI8bO6YElJcTCYPN7eFKe0GTg+U5OQOw/5d1NrHDg4iZdSSwn71Mt8AZY0rNDTTGNPtInVUs9oa7ovdzNoA88RZD8X0EB8ya9qF7zqawtXdaT+ogfLacNuK2wN47JvvWJFsXCvwybgTjZZAaaxfnjHLda9Ej4vXzoq5vbactN8U9sDiGjPQd5/nyT+Mu0Y24MrONIndsNoD9+WRTlQ1qa941olKq3FwCyvOpkVqYKGYIM2JvYmkffMakR9Sg5v46Xqx9TsoH8jP0mP5pBJ6zlAxf/UUAX05O81gDdxHFwm0bAV+PIi86IkjfhgS3oQ5WwKLXETN9JjqRMPM5rTSgMl5Zyc1H4GFAxIpHchS1Y1X+pLpGEr4I12T72pgwXgFdcjM7JxJgh4bD5axjXAK7R6YX53YTl+/0jbbKpv4f3MjDaF5vnO6AUo6amT6UICV4i2pjgay13em7ULXamC+7VCIZAvHh2aSd+QTWCC0Yih8CZRcN0iFtp5yRZJRZqXBQfpFXikqPTA3rfrdypbicvIpLWbXo+9lKZlVzcYe+G//AqZEFb6O/M9aAAAAAElFTkSuQmCC"
-    />
-  </g>
+  <path
+    d="m0 0h50v10c0 13.798-11.202 25-25 25s-25-11.202-25-25z"
+    fill="#415b58"
+  />
   <g fill="none" opacity=".5" stroke="#fff" stroke-linecap="round">
     <path d="m21 5 8 8" />
     <path d="m29 5-8 8" />
