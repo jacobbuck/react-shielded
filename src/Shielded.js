@@ -17,6 +17,7 @@ const Shielded = () => {
   return (
     <>
       <button
+        aria-label="Women’s Refuge"
         onClick={() => {
           setOpen(true);
         }}
@@ -35,7 +36,7 @@ const Shielded = () => {
         }}
         type="button"
       >
-        <Button aria-label="Women’s Refuge" role="img" />
+        <Button />
       </button>
       {isOpen && (
         <Modal

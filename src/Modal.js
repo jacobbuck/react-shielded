@@ -51,6 +51,7 @@ const Modal = (props) => {
         >
           {isLoading && (
             <div
+              aria-label="Loading"
               style={{
                 position: 'absolute',
                 display: 'flex',
@@ -60,7 +61,7 @@ const Modal = (props) => {
                 width: '310px',
               }}
             >
-              <Spinner aria-label="Loading" role="img" />
+              <Spinner />
             </div>
           )}
           <div
@@ -83,6 +84,7 @@ const Modal = (props) => {
               width="310"
             />
             <button
+              aria-label="Close"
               type="button"
               onClick={onRequestClose}
               style={{
@@ -98,7 +100,7 @@ const Modal = (props) => {
                 cursor: 'pointer',
               }}
             >
-              <Close aria-label="Close" role="img" />
+              <Close />
             </button>
           </div>
         </div>
