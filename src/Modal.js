@@ -36,7 +36,10 @@ const Modal = (props) => {
               />
             </div>
           )}
-          <div className={styles.frame} style={{ opacity: isLoading ? 0 : 1 }}>
+          <div
+            className={styles.frame}
+            style={{ opacity: isLoading ? 0 : 0.98 }}
+          >
             <iframe
               frameBorder="0"
               height="420"
