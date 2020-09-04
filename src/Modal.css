@@ -28,19 +28,6 @@
   align-items: center;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-.spinner {
-  animation: spin 1.5s infinite linear;
-}
-
 .frame {
   display: flex;
   flex-direction: column;
