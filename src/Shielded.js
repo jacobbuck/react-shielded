@@ -11,7 +11,7 @@ const Shielded = () => {
 
   useEffect(() => {
     if (isOpen === false) {
-      buttonRef.current.focus();
+      buttonRef.current?.focus();
     }
   }, [isOpen]);
 

@@ -15,7 +15,7 @@ const Modal = (props) => {
 
   useEffect(() => {
     if (isLoading === false) {
-      iframeRef.current.focus();
+      iframeRef.current?.focus();
     }
   }, [isLoading]);
 
