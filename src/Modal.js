@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import DocumentPortal from 'react-document-portal';
 import useKeypress from 'react-use-keypress';
 import Close from './close.svg';
@@ -8,13 +8,7 @@ import useLockBodyScroll from './useLockBodyScroll';
 const Modal = (props) => {
   const { onRequestClose } = props;
 
-  const iframeRef = useRef(null);
-
   const [isLoading, setLoading] = useState(true);
-
-  useEffect(() => {
-    iframeRef.current?.focus();
-  }, []);
 
   useKeypress('Escape', onRequestClose);
 
@@ -77,7 +71,9 @@ const Modal = (props) => {
               onLoad={() => {
                 setLoading(false);
               }}
-              ref={iframeRef}
+              ref={(node) => {
+                node?.focus();
+              }}
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
               src="https://staticcdn.co.nz"
               width="310"
