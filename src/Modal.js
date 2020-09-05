@@ -13,10 +13,8 @@ const Modal = (props) => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (isLoading === false) {
-      iframeRef.current?.focus();
-    }
-  }, [isLoading]);
+    iframeRef.current?.focus();
+  }, []);
 
   useKeypress('Escape', onRequestClose);
 
@@ -59,6 +57,7 @@ const Modal = (props) => {
                 height: '420px',
                 justifyContent: 'center',
                 width: '310px',
+                zIndex: '1',
               }}
             >
               <Spinner />
@@ -68,20 +67,22 @@ const Modal = (props) => {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              opacity: isLoading ? '0' : '0.98',
+              opacity: '0.98',
             }}
           >
             <iframe
               aria-label="The Shielded Site"
               frameBorder="0"
               height="420"
-              onError={onRequestClose}
               onLoad={() => {
                 setLoading(false);
               }}
               ref={iframeRef}
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
               src="https://staticcdn.co.nz"
+              style={{
+                background: 'linear-gradient(180deg, #2d3a38 0%, #415b58 100%)',
+              }}
               width="310"
             />
             <button
