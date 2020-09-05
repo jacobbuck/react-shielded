@@ -54,10 +54,10 @@ const Modal = (props) => {
                 position: 'absolute',
                 display: 'flex',
                 alignItems: 'center',
-                height: '420px',
                 justifyContent: 'center',
+                height: '420px',
                 width: '310px',
-                zIndex: '1',
+                background: 'linear-gradient(180deg, #2d3a38 0%, #415b58 100%)',
               }}
             >
               <Spinner />
@@ -80,9 +80,6 @@ const Modal = (props) => {
               ref={iframeRef}
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
               src="https://staticcdn.co.nz"
-              style={{
-                background: 'linear-gradient(180deg, #2d3a38 0%, #415b58 100%)',
-              }}
               width="310"
             />
             <button
