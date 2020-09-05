@@ -2,11 +2,23 @@
 
 ## Unreleased
 
+### Added
+
+- Added background to loading state that matches iframe contents.
+
 ### Changed
 
-- Moved styles from injected CSS to inline styles for better SSR support.
-- Replaced CSS animation of spinner with SVG animation.
+- Improved labels for screen readers and other assistive technologies.
+- Replaced styles from injected CSS to inline styles for better SSR support.
+- Replaced CSS animation of spinner with SVG animation inside [spinner.svg](./src/spinner.svg).
+- Updated [close.svg](./src/close.svg) to no longer have textured background.
 - Updated devDependencies.
+
+### Removed
+
+- Removed [@babel/runtime](https://www.npmjs.com/package/@babel/runtime) dependency for Babel helpers.
+- Removed error handler for iframe and always display iframe and close button.
+- Removed explicit [react-dom](https://www.npmjs.com/package/react-dom) peerDependency.
 
 ## v1.4.1 - 2020-09-04
 
