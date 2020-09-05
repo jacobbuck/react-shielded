@@ -104,4 +104,8 @@ const Modal = (props) => {
   );
 };
 
+Modal.propTypes = {
+  onRequestClose: () => {},
+};
+
 export default Modal;
