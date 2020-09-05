@@ -2,16 +2,18 @@
   "env": {
     "browser": true,
     "es6": true,
+    "jest": true,
     "node": true
   },
   "extends": [
     "eslint:recommended",
+    "plugin:jest/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
   "parser": "babel-eslint",
-  "plugins": ["prettier", "react", "react-hooks"],
+  "plugins": ["jest", "prettier", "react", "react-hooks"],
   "settings": {
     "react": {
       "version": "16.8.0"
