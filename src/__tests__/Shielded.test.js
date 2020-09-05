@@ -16,8 +16,7 @@ test('clicking button opens modal', () => {
 
 test('closing modal focuses button', () => {
   const { getByLabelText } = render(<Shielded />);
-  const button = getByLabelText('Women’s Refuge');
-  userEvent.click(button);
+  userEvent.click(getByLabelText('Women’s Refuge'));
   userEvent.click(getByLabelText('Close'));
-  expect(button).toHaveFocus();
+  expect(getByLabelText('Women’s Refuge')).toHaveFocus();
 });
