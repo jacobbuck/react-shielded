@@ -21,7 +21,7 @@ Install with your favourite package manager:
 
 `npm install react-shielded` or `yarn add react-shielded`.
 
-> :warning: Requires React and React DOM 16.8 or higher.
+> :warning: Requires React v16.8.0 or higher.
 
 Import in the `Shielded` component:
 
