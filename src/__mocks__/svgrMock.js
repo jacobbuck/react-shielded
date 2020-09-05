@@ -1,5 +1,5 @@
 import React from 'react';
 
-const MockSvg = (props) => <svg {...props} />;
+const MockSvg = () => <svg />;
 
 export default MockSvg;
