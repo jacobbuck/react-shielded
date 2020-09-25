@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Updated React import to avoid using default import.
+- Updated styles to use numbers (instead of strings) where possible.
+- Updated devDependencies.
+
 ## v1.5.0 - 2020-09-05
 
 ### Added
