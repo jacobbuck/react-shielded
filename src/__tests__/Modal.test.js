@@ -4,8 +4,8 @@ import * as React from 'react';
 import Modal from '../Modal';
 
 test('renders and matches snapshot', () => {
-  const { container } = render(<Modal onRequestClose={() => {}} />);
-  expect(container.firstChild).toMatchSnapshot();
+  const { getByRole } = render(<Modal onRequestClose={() => {}} />);
+  expect(getByRole('dialog')).toMatchSnapshot();
 });
 
 test('iframe is focused on mount', () => {
