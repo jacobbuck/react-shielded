@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
+import * as React from 'react';
 import Shielded from '../Shielded';
 
 test('renders and matches snapshot', () => {
