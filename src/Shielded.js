@@ -50,6 +50,8 @@ const Shielded = () => {
   );
 };
 
-Shielded.propTypes = {};
+if (process.env.NODE_ENV !== 'production') {
+  Shielded.propTypes = {};
+}
 
 export default Shielded;
