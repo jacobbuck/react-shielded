@@ -25,15 +25,15 @@ const Shielded = () => {
         ref={buttonRef}
         style={{
           display: 'inline-block',
-          margin: '0',
-          padding: '0',
+          margin: 0,
+          padding: 0,
           border: 'none',
           WebkitAppearance: 'none',
           MozAppearance: 'none',
           appearance: 'none',
           background: 'none',
           cursor: 'pointer',
-          opacity: isOpen ? '0' : '1',
+          opacity: isOpen ? 0 : 1,
         }}
         type="button"
       >

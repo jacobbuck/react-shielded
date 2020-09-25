@@ -22,11 +22,11 @@ const Modal = (props) => {
         role="dialog"
         style={{
           position: 'fixed',
-          top: '0',
-          left: '0',
-          right: '0',
-          bottom: '0',
-          zIndex: '99999',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 99999,
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
@@ -39,7 +39,7 @@ const Modal = (props) => {
             position: 'relative',
             display: 'flex',
             flexDirection: 'column',
-            width: '310px',
+            width: 310,
           }}
         >
           {isLoading && (
@@ -50,8 +50,8 @@ const Modal = (props) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: '420px',
-                width: '310px',
+                height: 420,
+                width: 310,
                 background: 'linear-gradient(180deg, #2d3a38 0%, #415b58 100%)',
               }}
             >
@@ -62,7 +62,7 @@ const Modal = (props) => {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              opacity: '0.98',
+              opacity: 0.98,
             }}
           >
             <iframe
@@ -87,7 +87,7 @@ const Modal = (props) => {
                 display: 'inline-block',
                 alignSelf: 'center',
                 margin: '-1px 0 0 0',
-                padding: '0',
+                padding: 0,
                 border: 'none',
                 WebkitAppearance: 'none',
                 MozAppearance: 'none',
