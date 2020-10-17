@@ -6,9 +6,7 @@ import Close from './close.svg';
 import Spinner from './spinner.svg';
 import useLockBodyScroll from './useLockBodyScroll';
 
-const Modal = (props) => {
-  const { onRequestClose } = props;
-
+const Modal = ({ onRequestClose }) => {
   const [isLoading, setLoading] = useState(true);
 
   useKeypress('Escape', onRequestClose);
