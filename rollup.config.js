@@ -1,22 +1,17 @@
 import babel from '@rollup/plugin-babel';
 import svgr from '@svgr/rollup';
+import pkg from './package.json';
 
 export default {
   input: 'src/index.js',
   output: [
-    {
-      exports: 'default',
-      file: 'lib/index.cjs.js',
-      format: 'cjs',
-      sourcemap: true,
-    },
-    {
-      file: 'lib/index.esm.js',
-      format: 'esm',
-      sourcemap: true,
-    },
+    { file: pkg.main, format: 'cjs', sourcemap: true, exports: 'default' },
+    { file: pkg.module, format: 'esm', sourcemap: true },
   ],
-  external: ['react', 'react-document-portal', 'react-use-keypress'],
+  external: [
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies),
+  ],
   plugins: [
     svgr({ babel: false, expandProps: false }),
     babel({
