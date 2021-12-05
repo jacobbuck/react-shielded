@@ -14,6 +14,9 @@
   ],
   "parser": "babel-eslint",
   "plugins": ["jest", "prettier", "react", "react-hooks"],
+  "rules": {
+    "react/prop-types": "off"
+  },
   "settings": {
     "react": {
       "version": "16.8.0"

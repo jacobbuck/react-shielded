@@ -103,10 +103,4 @@ const Modal = ({ onRequestClose }) => {
   );
 };
 
-if (process.env.NODE_ENV !== 'production') {
-  Modal.propTypes = {
-    onRequestClose: () => {},
-  };
-}
-
 export default Modal;
