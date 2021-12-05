@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import * as React from 'react';
 import Shielded from '../Shielded';
@@ -8,15 +8,19 @@ test('renders and matches snapshot', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
-test('clicking button opens modal', () => {
+test('clicking button opens modal', async () => {
   const { getByLabelText, getByRole } = render(<Shielded />);
   userEvent.click(getByLabelText('Women’s Refuge'));
-  expect(getByRole('dialog')).toBeTruthy();
+  await waitFor(() => {
+    expect(getByRole('dialog')).toBeTruthy();
+  });
 });
 
-test('closing modal focuses button', () => {
+test('closing modal focuses button', async () => {
   const { getByLabelText } = render(<Shielded />);
   userEvent.click(getByLabelText('Women’s Refuge'));
   userEvent.click(getByLabelText('Close'));
-  expect(getByLabelText('Women’s Refuge')).toHaveFocus();
+  await waitFor(() => {
+    expect(getByLabelText('Women’s Refuge')).toHaveFocus();
+  });
 });
