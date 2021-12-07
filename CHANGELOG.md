@@ -2,9 +2,9 @@
 
 ## Unreleased
 
-### Added
+### Changed
 
-- Added source maps to build output.
+- **BREAKING** Changed JSX transform to use new React JSX runtime.
 
 ## v1.6.0 - 2020-09-25
 
