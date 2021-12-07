@@ -8,6 +8,8 @@ From [The Shielded Site Project](https://shielded.co.nz) website:
 
 > We’ve created a tool for victims of abuse to ask for help, without fear of it showing up in their browser’s history or an abusive partner ever seeing it. A simple icon which can sit on any website and launch a powerful resource to help end domestic violence.
 
+![screenshot](docs/images/screenshot.png)
+
 ## Features
 
 - :100: Rewrite of the [Shielded script](https://staticcdn.co.nz/embed/embed.js) in React.
@@ -21,7 +23,7 @@ Install with your favourite package manager:
 
 `npm install react-shielded` or `yarn add react-shielded`.
 
-> :warning: Requires React v16.8.0 or higher.
+> :warning: Requires React v16.14.0 or higher.
 
 Import in the `Shielded` component:
 
