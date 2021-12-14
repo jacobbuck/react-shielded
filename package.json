@@ -12,7 +12,7 @@
     "coverage": "jest --coverage",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "prepublishOnly": "npm run test",
     "start": "rollup -c -w",
     "test": "jest"
