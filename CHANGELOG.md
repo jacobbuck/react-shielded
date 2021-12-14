@@ -1,5 +1,11 @@
 # Changelog
 
+## Unchanged
+
+### Added
+
+- Added [react-dom](https://www.npmjs.com/package/react-dom) peer-dependency.
+
 ## v2.0.0 - 2021-12-14
 
 ### Changed
@@ -15,7 +21,7 @@
 ### Changed
 
 - Updated `propTypes` to only be defined in non-production environments.
-- Updated devDependencies.
+- Updated dev-dependencies.
 - Updated React import to avoid using default import.
 - Updated styles to use numbers (instead of strings) where possible.
 
@@ -31,19 +37,19 @@
 - Replaced styles from injected CSS to inline styles for better SSR support.
 - Replaced CSS animation of spinner with SVG animation inside [spinner.svg](./src/spinner.svg).
 - Updated [close.svg](./src/close.svg) to no longer have textured background.
-- Updated devDependencies.
+- Updated dev-dependencies.
 
 ### Removed
 
 - Removed [@babel/runtime](https://www.npmjs.com/package/@babel/runtime) dependency for Babel helpers.
 - Removed error handler for iframe and always display iframe and close button.
-- Removed explicit [react-dom](https://www.npmjs.com/package/react-dom) peerDependency.
+- Removed explicit [react-dom](https://www.npmjs.com/package/react-dom) peer-dependency.
 
 ## v1.4.1 - 2020-09-04
 
 ### Changed
 
-- Updated devDependencies.
+- Updated dev-dependencies.
 
 ### Fixed
 
@@ -57,7 +63,7 @@
 - Changed how `overflow` style on `<body>` element is reverted to prevent taking higher specificity over app styles.
 - Replaced internal `Portal` component with [react-document-portal](https://www.npmjs.com/package/react-document-portal).
 - Replaced all uses of `useLayoutEffect` hook with `useEffect` hook.
-- Updated devDependencies.
+- Updated dev-dependencies.
 
 ## v1.3.0 - 2020-07-10
 
@@ -69,7 +75,7 @@
 
 - Bumped up version of [react-use-keypress](https://www.npmjs.com/package/react-use-keypress) to v1.0.1.
 - Reduced build output of SVG components.
-- Updated devDependencies.
+- Updated dev-dependencies.
 
 ## v1.2.0 - 2020-05-19
 
@@ -81,7 +87,7 @@
 
 - Enabled loose mode on '@babel/preset-env' to reduce build output.
 - Replaced internal `useEscapeKey` hook with [react-use-keypress](https://www.npmjs.com/package/react-use-keypress).
-- Updated devDependencies.
+- Updated dev-dependencies.
 
 ### Removed
 
