@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 import DocumentPortal from 'react-document-portal';
 import useKeypress from 'react-use-keypress';
