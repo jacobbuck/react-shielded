@@ -10,6 +10,7 @@
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
   ],
   "parser": "@babel/eslint-parser",
