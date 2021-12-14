@@ -6,6 +6,10 @@
 
 - **BREAKING** Changed JSX transform to use new React JSX runtime.
 
+### Removed
+
+- Removed `propTypes` property from components.
+
 ## v1.6.0 - 2020-09-25
 
 ### Changed
