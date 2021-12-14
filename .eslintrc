@@ -12,7 +12,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "plugins": ["jest", "prettier", "react", "react-hooks"],
   "rules": {
     "react/prop-types": "off"
