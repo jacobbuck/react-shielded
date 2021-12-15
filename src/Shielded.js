@@ -1,18 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Modal from './Modal';
 import Button from './button.svg';
 
 const Shielded = () => {
   const buttonRef = useRef(null);
 
-  // Set to `null` initially to prevent calling focus on first mount.
-  const [isOpen, setOpen] = useState(null);
-
-  useEffect(() => {
-    if (isOpen === false) {
-      buttonRef.current?.focus();
-    }
-  }, [isOpen]);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <>
@@ -42,6 +35,7 @@ const Shielded = () => {
         <Modal
           onRequestClose={() => {
             setOpen(false);
+            buttonRef.current?.focus();
           }}
         />
       )}
