@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/jacobbuck/react-shielded#readme",
   "dependencies": {
-    "react-document-portal": "^1.0.1",
+    "react-document-portal": "^1.2.0",
     "react-use-keypress": "^1.0.1"
   },
   "devDependencies": {
