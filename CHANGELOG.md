@@ -1,10 +1,14 @@
 # Changelog
 
-## Unchanged
+## Unreleased
 
 ### Added
 
 - Added [react-dom](https://www.npmjs.com/package/react-dom) peer-dependency.
+
+### Changed
+
+- Updated [react-document-portal](https://www.npmjs.com/package/react-document-portal) dependency to v.1.2.0.
 
 ## v2.0.0 - 2021-12-14
 
