@@ -13,9 +13,14 @@
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
   ],
-  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
   "plugins": ["jest", "prettier", "react", "react-hooks"],
   "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "react/prop-types": "off"
   },
   "settings": {
