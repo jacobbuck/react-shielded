@@ -1,6 +1,6 @@
 {
   "name": "react-shielded",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Add the Women's Refuge Shielded Site button to your React website",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
