@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Updated [react-document-portal](https://www.npmjs.com/package/react-document-portal) dependency to v1.2.1.
+- Updated [react-use-keypress](https://www.npmjs.com/package/react-document-portal) dependency to v1.3.1.
+- Updated [react](https://www.npmjs.com/package/react) and [react-dom](https://www.npmjs.com/package/react-dom) peer-dependencies to support v18.
+
 ## v2.0.1 - 2021-12-15
 
 ### Added
@@ -8,7 +16,7 @@
 
 ### Changed
 
-- Updated [react-document-portal](https://www.npmjs.com/package/react-document-portal) dependency to v.1.2.0.
+- Updated [react-document-portal](https://www.npmjs.com/package/react-document-portal) dependency to v1.2.0.
 
 ## v2.0.0 - 2021-12-14
 
@@ -25,7 +33,6 @@
 ### Changed
 
 - Updated `propTypes` to only be defined in non-production environments.
-- Updated dev-dependencies.
 - Updated React import to avoid using default import.
 - Updated styles to use numbers (instead of strings) where possible.
 
@@ -41,7 +48,6 @@
 - Replaced styles from injected CSS to inline styles for better SSR support.
 - Replaced CSS animation of spinner with SVG animation inside [spinner.svg](./src/spinner.svg).
 - Updated [close.svg](./src/close.svg) to no longer have textured background.
-- Updated dev-dependencies.
 
 ### Removed
 
@@ -50,10 +56,6 @@
 - Removed explicit [react-dom](https://www.npmjs.com/package/react-dom) peer-dependency.
 
 ## v1.4.1 - 2020-09-04
-
-### Changed
-
-- Updated dev-dependencies.
 
 ### Fixed
 
@@ -67,7 +69,6 @@
 - Changed how `overflow` style on `<body>` element is reverted to prevent taking higher specificity over app styles.
 - Replaced internal `Portal` component with [react-document-portal](https://www.npmjs.com/package/react-document-portal).
 - Replaced all uses of `useLayoutEffect` hook with `useEffect` hook.
-- Updated dev-dependencies.
 
 ## v1.3.0 - 2020-07-10
 
@@ -79,7 +80,6 @@
 
 - Bumped up version of [react-use-keypress](https://www.npmjs.com/package/react-use-keypress) to v1.0.1.
 - Reduced build output of SVG components.
-- Updated dev-dependencies.
 
 ## v1.2.0 - 2020-05-19
 
@@ -91,7 +91,6 @@
 
 - Enabled loose mode on '@babel/preset-env' to reduce build output.
 - Replaced internal `useEscapeKey` hook with [react-use-keypress](https://www.npmjs.com/package/react-use-keypress).
-- Updated dev-dependencies.
 
 ### Removed
 
