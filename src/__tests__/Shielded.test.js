@@ -4,12 +4,14 @@ import Shielded from '../Shielded';
 
 test('renders and matches snapshot', () => {
   render(<Shielded />);
-  expect(screen.getByLabelText('Women’s Refuge')).toMatchSnapshot();
+  expect(
+    screen.getByRole('button', { name: 'Women’s Refuge' })
+  ).toMatchSnapshot();
 });
 
 test('clicking button opens modal', async () => {
   render(<Shielded />);
-  await userEvent.click(screen.getByLabelText('Women’s Refuge'));
+  await userEvent.click(screen.getByRole('button', { name: 'Women’s Refuge' }));
   await waitFor(() => {
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -17,8 +19,8 @@ test('clicking button opens modal', async () => {
 
 test('closing modal focuses button', async () => {
   render(<Shielded />);
-  await userEvent.click(screen.getByLabelText('Women’s Refuge'));
-  await userEvent.click(screen.getByLabelText('Close'));
+  await userEvent.click(screen.getByRole('button', { name: 'Women’s Refuge' }));
+  await userEvent.click(screen.getByRole('button', { name: 'Close' }));
   await waitFor(() => {
     expect(screen.getByLabelText('Women’s Refuge')).toHaveFocus();
   });

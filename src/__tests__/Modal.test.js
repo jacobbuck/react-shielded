@@ -22,7 +22,7 @@ test('loading indicator is hidden when iframe has loaded', () => {
 test('clicking close button calls onRequestClose callback', async () => {
   const close = jest.fn();
   render(<Modal onRequestClose={close} />);
-  await userEvent.click(screen.getByLabelText('Close'));
+  await userEvent.click(screen.getByRole('button', { name: 'Close' }));
   expect(close).toHaveBeenCalledTimes(1);
 });
 
