@@ -6,15 +6,9 @@ const TestComponent = () => {
   return <div />;
 };
 
-TestComponent.propTypes = {};
-
-test('sets "overflow: hidden" style on document body', () => {
-  render(<TestComponent />);
-  expect(document.body).toHaveStyle('overflow: hidden');
-});
-
-test('unsets "overflow: hidden" style on document body on unmount', () => {
+test('sets "overflow: hidden" style on document body and unsets on unmout', () => {
   const { unmount } = render(<TestComponent />);
+  expect(document.body).toHaveStyle('overflow: hidden');
   unmount();
   expect(document.body).not.toHaveStyle('overflow: hidden');
 });
