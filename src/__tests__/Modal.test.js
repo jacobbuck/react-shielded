@@ -1,36 +1,34 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Modal from '../Modal';
 
 test('renders and matches snapshot', () => {
-  const { getByRole } = render(<Modal onRequestClose={() => {}} />);
-  expect(getByRole('dialog')).toMatchSnapshot();
+  render(<Modal onRequestClose={() => {}} />);
+  expect(screen.getByRole('dialog')).toMatchSnapshot();
 });
 
 test('iframe is focused on mount', () => {
-  const { getByLabelText } = render(<Modal onRequestClose={() => {}} />);
-  fireEvent.load(getByLabelText('The Shielded Site'));
-  expect(getByLabelText('The Shielded Site')).toHaveFocus();
+  render(<Modal onRequestClose={() => {}} />);
+  fireEvent.load(screen.getByLabelText('The Shielded Site'));
+  expect(screen.getByLabelText('The Shielded Site')).toHaveFocus();
 });
 
 test('loading indicator is hidden when iframe has loaded', () => {
-  const { getByLabelText, queryByLabelText } = render(
-    <Modal onRequestClose={() => {}} />
-  );
-  fireEvent.load(getByLabelText('The Shielded Site'));
-  expect(queryByLabelText('Loading')).toBeNull();
+  render(<Modal onRequestClose={() => {}} />);
+  fireEvent.load(screen.getByLabelText('The Shielded Site'));
+  expect(screen.queryByLabelText('Loading')).not.toBeInTheDocument();
 });
 
-test('clicking close button calls onRequestClose callback', () => {
+test('clicking close button calls onRequestClose callback', async () => {
   const close = jest.fn();
-  const { getByLabelText } = render(<Modal onRequestClose={close} />);
-  userEvent.click(getByLabelText('Close'));
+  render(<Modal onRequestClose={close} />);
+  await userEvent.click(screen.getByLabelText('Close'));
   expect(close).toHaveBeenCalledTimes(1);
 });
 
-test('pressing Escape key calls onRequestClose callback', () => {
+test('pressing Escape key calls onRequestClose callback', async () => {
   const close = jest.fn();
-  const { getByRole } = render(<Modal onRequestClose={close} />);
-  userEvent.type(getByRole('dialog'), '{esc}');
+  render(<Modal onRequestClose={close} />);
+  await userEvent.type(screen.getByRole('dialog'), '{esc}');
   expect(close).toHaveBeenCalledTimes(1);
 });
