@@ -8,17 +8,26 @@
   "extends": [
     "eslint:recommended",
     "plugin:jest/recommended",
+    "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:testing-library/react"
   ],
   "parserOptions": {
     "ecmaFeatures": { "jsx": true },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["jest", "prettier", "react", "react-hooks"],
+  "plugins": [
+    "jest",
+    "jest-dom",
+    "prettier",
+    "react",
+    "react-hooks",
+    "testing-library"
+  ],
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true }],
     "react/prop-types": "off"
