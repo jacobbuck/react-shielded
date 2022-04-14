@@ -3,13 +3,13 @@ import userEvent from '@testing-library/user-event';
 import Shielded from '../Shielded';
 
 test('renders and matches snapshot', () => {
-  const { container } = render(<Shielded />);
-  expect(container).toMatchSnapshot();
+  render(<Shielded />);
+  expect(screen.getByLabelText('Women’s Refuge')).toMatchSnapshot();
 });
 
 test('clicking button opens modal', async () => {
   render(<Shielded />);
-  userEvent.click(screen.getByLabelText('Women’s Refuge'));
+  await userEvent.click(screen.getByLabelText('Women’s Refuge'));
   await waitFor(() => {
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -17,8 +17,8 @@ test('clicking button opens modal', async () => {
 
 test('closing modal focuses button', async () => {
   render(<Shielded />);
-  userEvent.click(screen.getByLabelText('Women’s Refuge'));
-  userEvent.click(screen.getByLabelText('Close'));
+  await userEvent.click(screen.getByLabelText('Women’s Refuge'));
+  await userEvent.click(screen.getByLabelText('Close'));
   await waitFor(() => {
     expect(screen.getByLabelText('Women’s Refuge')).toHaveFocus();
   });

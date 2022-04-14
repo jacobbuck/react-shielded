@@ -29,6 +29,6 @@ test('clicking close button calls onRequestClose callback', async () => {
 test('pressing Escape key calls onRequestClose callback', async () => {
   const close = jest.fn();
   render(<Modal onRequestClose={close} />);
-  await userEvent.type(screen.getByRole('dialog'), '{esc}');
+  await userEvent.type(screen.getByRole('dialog'), '{Escape}');
   expect(close).toHaveBeenCalledTimes(1);
 });
