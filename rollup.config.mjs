@@ -1,17 +1,18 @@
-import babel from '@rollup/plugin-babel';
+import { babel } from '@rollup/plugin-babel';
 import svgr from '@svgr/rollup';
-import pkg from './package.json';
 
 export default {
   input: 'src/index.js',
   output: [
-    { file: pkg.main, format: 'cjs', exports: 'default' },
-    { file: pkg.module, format: 'esm' },
+    { file: 'lib/index.cjs.js', format: 'cjs' },
+    { file: 'lib/index.esm.js', format: 'esm' },
   ],
   external: [
-    ...Object.keys(pkg.dependencies),
-    ...Object.keys(pkg.peerDependencies),
+    'react',
     'react/jsx-runtime',
+    'react-document-portal',
+    'react-dom',
+    'react-use-keypress',
   ],
   plugins: [
     svgr({ babel: false, expandProps: false }),
