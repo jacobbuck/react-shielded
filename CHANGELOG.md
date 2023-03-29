@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Modal updated to handle "Accessibility improvements for shielded widget".
+- Modal listens to `message` event on `window` to detect close button clicked in iframe.
+
+### Removed
+
+- Removed close button.
+- Removed loading indicator.
+
 ## v2.0.2 - 2022-04-14
 
 ### Changed
