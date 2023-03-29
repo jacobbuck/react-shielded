@@ -4,9 +4,7 @@ import Button from './button.svg';
 
 const Shielded = () => {
   const buttonRef = useRef(null);
-
   const [isOpen, setOpen] = useState(false);
-
   return (
     <>
       <button

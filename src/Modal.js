@@ -1,17 +1,16 @@
-import { useState } from 'react';
 import DocumentPortal from 'react-document-portal';
 import useKeypress from 'react-use-keypress';
-import Close from './close.svg';
-import Spinner from './spinner.svg';
 import useLockBodyScroll from './useLockBodyScroll';
+import useMessage from './useMessage';
 
 const Modal = ({ onRequestClose }) => {
-  const [isLoading, setLoading] = useState(true);
-
-  useKeypress('Escape', onRequestClose);
-
   useLockBodyScroll();
-
+  useKeypress('Escape', onRequestClose);
+  useMessage((event) => {
+    if ('closeModal' === event.data) {
+      onRequestClose();
+    }
+  });
   return (
     <DocumentPortal>
       <div
@@ -31,72 +30,21 @@ const Modal = ({ onRequestClose }) => {
           overflow: 'auto',
         }}
       >
-        <div
-          style={{
-            position: 'relative',
-            display: 'flex',
-            flexDirection: 'column',
-            width: 310,
+        <iframe
+          aria-label="The Shielded Site"
+          frameBorder="0"
+          height="455"
+          onLoad={(event) => {
+            event.target?.focus();
           }}
-        >
-          {isLoading && (
-            <div
-              aria-label="Loading"
-              style={{
-                position: 'absolute',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: 420,
-                width: 310,
-                background: 'linear-gradient(180deg, #2d3a38 0%, #415b58 100%)',
-              }}
-            >
-              <Spinner />
-            </div>
-          )}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              opacity: 0.98,
-            }}
-          >
-            <iframe
-              aria-label="The Shielded Site"
-              frameBorder="0"
-              height="420"
-              onLoad={() => {
-                setLoading(false);
-              }}
-              ref={(node) => {
-                node?.focus();
-              }}
-              sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-              src="https://staticcdn.co.nz"
-              width="310"
-            />
-            <button
-              aria-label="Close"
-              type="button"
-              onClick={onRequestClose}
-              style={{
-                display: 'inline-block',
-                alignSelf: 'center',
-                margin: '-1px 0 0 0',
-                padding: 0,
-                border: 'none',
-                WebkitAppearance: 'none',
-                MozAppearance: 'none',
-                appearance: 'none',
-                background: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              <Close />
-            </button>
-          </div>
-        </div>
+          sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+          src="https://staticcdn.co.nz"
+          style={{
+            maxHeight: '100%',
+            opacity: 0.98,
+          }}
+          width="310"
+        />
       </div>
     </DocumentPortal>
   );
