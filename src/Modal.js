@@ -68,7 +68,7 @@ const Modal = (props) => {
             <iframe
               aria-label="The Shielded Site"
               frameBorder="0"
-              height="420"
+              height="455"
               onLoad={() => {
                 setLoading(false);
               }}
@@ -86,7 +86,7 @@ const Modal = (props) => {
               style={{
                 display: 'inline-block',
                 alignSelf: 'center',
-                margin: '-1px 0 0 0',
+                margin: '-35px 0 0 0',
                 padding: 0,
                 border: 'none',
                 WebkitAppearance: 'none',
