@@ -2,33 +2,35 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Modal from '../Modal';
 
-test('renders and matches snapshot', () => {
+test('matches snapshot', () => {
   render(<Modal onRequestClose={() => {}} />);
   expect(screen.getByRole('dialog')).toMatchSnapshot();
 });
 
-test('iframe is focused on mount', () => {
+test('iframe is focused on iframe load', () => {
   render(<Modal onRequestClose={() => {}} />);
   fireEvent.load(screen.getByLabelText('The Shielded Site'));
   expect(screen.getByLabelText('The Shielded Site')).toHaveFocus();
 });
 
-test('loading indicator is hidden when iframe has loaded', () => {
-  render(<Modal onRequestClose={() => {}} />);
-  fireEvent.load(screen.getByLabelText('The Shielded Site'));
-  expect(screen.queryByLabelText('Loading')).not.toBeInTheDocument();
-});
-
-test('clicking close button calls onRequestClose callback', async () => {
+test('onRequestClose prop is called when a message with "closeModal" is received', () => {
   const close = jest.fn();
   render(<Modal onRequestClose={close} />);
-  await userEvent.click(screen.getByRole('button', { name: 'Close' }));
-  expect(close).toHaveBeenCalledTimes(1);
+  fireEvent(window, new MessageEvent('message', { data: 'closeModal' }));
+  expect(close).toHaveBeenCalled();
 });
 
-test('pressing Escape key calls onRequestClose callback', async () => {
+test('onRequestClose prop is not called when a different message is received', () => {
   const close = jest.fn();
   render(<Modal onRequestClose={close} />);
-  await userEvent.type(screen.getByRole('dialog'), '{Escape}');
+  fireEvent(window, new MessageEvent('message', { data: 'foo' }));
+  expect(close).not.toHaveBeenCalled();
+});
+
+test('onRequestClose prop is called when the Escape key has been pressed', async () => {
+  const user = userEvent.setup();
+  const close = jest.fn();
+  render(<Modal onRequestClose={close} />);
+  await user.keyboard('{Escape}');
   expect(close).toHaveBeenCalledTimes(1);
 });

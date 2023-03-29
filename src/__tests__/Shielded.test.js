@@ -2,25 +2,27 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Shielded from '../Shielded';
 
-test('renders and matches snapshot', () => {
+test('matches snapshot', () => {
   render(<Shielded />);
   expect(
     screen.getByRole('button', { name: 'Women’s Refuge' })
   ).toMatchSnapshot();
 });
 
-test('clicking button opens modal', async () => {
+test('modal is opened when user has clicked button', async () => {
+  const user = userEvent.setup();
   render(<Shielded />);
-  await userEvent.click(screen.getByRole('button', { name: 'Women’s Refuge' }));
+  await user.click(screen.getByRole('button', { name: 'Women’s Refuge' }));
   await waitFor(() => {
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
 });
 
-test('closing modal focuses button', async () => {
+test('button is focused when modal has closed', async () => {
+  const user = userEvent.setup();
   render(<Shielded />);
-  await userEvent.click(screen.getByRole('button', { name: 'Women’s Refuge' }));
-  await userEvent.click(screen.getByRole('button', { name: 'Close' }));
+  await user.click(screen.getByRole('button', { name: 'Women’s Refuge' }));
+  await user.keyboard('{Escape}');
   await waitFor(() => {
     expect(screen.getByLabelText('Women’s Refuge')).toHaveFocus();
   });

@@ -1,39 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders and matches snapshot 1`] = `
+exports[`matches snapshot 1`] = `
 <div
   aria-modal="true"
   role="dialog"
   style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 99999; display: flex; align-items: center; flex-direction: column; background-color: rgba(0, 0, 0, 0.5); overflow: auto;"
 >
-  <div
-    style="position: relative; display: flex; flex-direction: column; width: 310px;"
-  >
-    <div
-      aria-label="Loading"
-      style="position: absolute; display: flex; align-items: center; justify-content: center; height: 420px; width: 310px;"
-    >
-      <svg />
-    </div>
-    <div
-      style="display: flex; flex-direction: column; opacity: 0.98;"
-    >
-      <iframe
-        aria-label="The Shielded Site"
-        frameborder="0"
-        height="420"
-        sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-        src="https://staticcdn.co.nz"
-        width="310"
-      />
-      <button
-        aria-label="Close"
-        style="display: inline-block; align-self: center; margin: -1px 0px 0px 0px; padding: 0px; appearance: none; background: none; cursor: pointer;"
-        type="button"
-      >
-        <svg />
-      </button>
-    </div>
-  </div>
+  <iframe
+    aria-label="The Shielded Site"
+    frameborder="0"
+    height="455"
+    sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
+    src="https://staticcdn.co.nz"
+    style="max-height: 100%; opacity: 0.98;"
+    width="310"
+  />
 </div>
 `;
