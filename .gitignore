@@ -1,5 +1,6 @@
 coverage/
-lib/
+lib/index.cjs.js
+lib/index.esm.js
 node_modules/
 package-lock.json
 yarn.lock

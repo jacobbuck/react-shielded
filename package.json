@@ -4,7 +4,7 @@
   "description": "Add the Women's Refuge Shielded Site button to your React website",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
-  "types": "types/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
